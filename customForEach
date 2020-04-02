@@ -2,6 +2,8 @@
  * If you are are confused by forEach, filter, or map what better way
  * to get a better understanding of how it works than by building your own version.
  */
+ 
+ /** NOTE: This custom forEach method that we make does not completely cover every aspect of the native Array.prototype.forEach() method.
 
 /**
  * Array.prototype.forEach()
