@@ -1,0 +1,122 @@
+/**
+ * If you are are confused by forEach, filter, or map what better way
+ * to get a better understanding of how it works than by building your own version.
+ */
+
+/**
+ * Array.prototype.forEach()
+ *
+ * If we want to make our own forEach function we need to identify what we want it to do.
+ * From MDN: forEach executes a provided function once for each array element and returns undefined.
+ * We will make our own version named customForEach.
+ *
+ * Steps to create our customForEach:
+ *  1. give customForEach() a callback
+ *  2. run callback on each item in the array
+ *  3. give callback access to each item in the array
+ *  4. give callback access to the current index of the item in the array
+ *  5. give callback access to the original array that we call customForEach() on
+ */
+
+// create our own forEach function
+// First requirement take a callback
+
+// you can ignore this line but if you are intereseted what prototype is all about see:
+// https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
+Array.prototype.customForEach = customForEach;
+
+// 1. GIVE OUR CUSTOM FOREACH FUNCTION A CALLBACK TO RUN
+// ----------- UNCOMMENT BETWEEN THE LINES -----------
+
+// function customForEach(callback) {
+//   callback();
+// }
+
+// ["item1", "item2", "item3", "item4"].customForEach(() => {
+//   console.log("This is the callback that I passed to my customForEach");
+// });
+// ---------------------------------------------------
+
+console.log("-------------- \n");
+
+// 2. MAKE OUR CUSTOM FOREACH RUN A CALLBACK ON EACH ITEM IN THE ARRAY
+// ----------- UNCOMMENT BETWEEN THE LINES -----------
+// function customForEach(callback) {
+//   for (let i = 0; i < this.length; i++) {
+//     callback();
+//   }
+// }
+
+// ["item1", "item2", "item3"].forEach(() => {
+//   console.log(
+//     "This is our callback that we passed to customForEach running for every item in the array"
+//   );
+// });
+// ---------------------------------------------------
+
+console.log("-------------- \n");
+
+// 3. GIVE OUR CALLBACK ACCESS TO EACH ITEM IN THE ARRAY
+// ----------- UNCOMMENT BETWEEN THE LINES -----------
+// function customForEach(callback) {
+//   for (let i = 0; i < this.length; i++) {
+//     callback(this[i]);
+//   }
+// }
+
+// ["item1", "item2", "item3"].customForEach(item => {
+//   console.log(
+//     "The item from our array that our callback is currently looking at: ",
+//     item
+//   );
+// });
+// ---------------------------------------------------
+
+console.log("-------------- \n");
+
+// 4. GIVE OUR CALLBACK ACCESS TO INDEX
+// ----------- UNCOMMENT BETWEEN THE LINES -----------
+// function customForEach(callback) {
+//   for (let i = 0; i < this.length; i++) {
+//     callback(this[i], i);
+//   }
+// }
+
+// ["item1", "item2", "item3"].customForEach((item, index) => {
+//   console.log(
+//     "The item from our array that our callback is currently looking at: ",
+//     item,
+//     "The index of that item: ",
+//     index
+//   );
+// });
+// ---------------------------------------------------
+
+console.log("-------------- \n");
+
+// 5. GIVE OUR CALLBACK ACCESS TO THE ORIGINAL ARRAY IN THE LOOP
+// ----------- UNCOMMENT BETWEEN THE LINES -----------
+// function customForEach(callback) {
+//   for (let i = 0; i < this.length; i++) {
+//     callback(this[i], i, this);
+//   }
+// }
+
+// ["item1", "item2", "item3"].customForEach((item, index, array) => {
+//   console.log(
+//     "The item from our array that our callback is currently looking at: ",
+//     item,
+//     "The index of that item: ",
+//     index
+//   );
+
+//   console.log(
+//     "This is the original array that we called customForEach on",
+//     array
+//   );
+// });
+// ---------------------------------------------------
+
+console.log("-------------- \n");
+
+// customMap and customFilter coming soon.......
